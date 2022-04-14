@@ -1,0 +1,253 @@
+//mixin
+*{
+    margin: 0px;
+    padding: 0px;
+} 
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin columnmediaqueries{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+}
+@mixin estilo {
+    font-family: belleza;
+    font-size: 20px;
+    
+}
+@mixin blogtitulo{
+    font-family: belleza;
+    color: rgb(117, 245, 100);
+    margin: 20px;
+    width: 300px;
+    font-size: 25px;
+    font-weight: bold;
+}
+@mixin blogtexto{
+    font-size: 25px;
+     text-align: justify;
+     font-family: belleza;
+     color: pink;
+     margin: 35px;
+
+}
+    
+.logo{
+    @include flexrow();
+}
+.menu{
+    
+    @include flexrow;
+    li{
+        list-style: none;
+    }
+    a{
+        margin: 20px;
+        @include estilo;
+        text-decoration: none;
+        color: rgb(90, 255, 85);
+    }
+}
+.fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    div{
+        margin: 30px;
+    }
+}
+
+.footer{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include estilo;
+
+    color: rgb(90, 255, 85);
+ input{
+     width: 150px;
+     height: 50px;
+     margin: 10px;
+
+ }
+}
+.final{
+    background-color: rgb(255, 194, 242);
+    @include estilo;
+p{
+    padding: 10px;
+}
+}
+
+.holaa{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+ p{
+    font-family: belleza;
+    color: pink;
+    margin: 30px;
+     }
+ }
+ .holaa1{
+     width: 500px;
+     height: 500px;
+     font-size: 50px;
+     font-weight: bold;
+ }
+ .holaa2{
+     font-size: 25px;
+     text-align: justify;
+ }
+
+ .grid-container{
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-template-rows: auto auto auto auto;
+
+ }
+.grid-historia{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    font-family: belleza;
+    color: pink;
+    margin: 30px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.grid-historia1{
+    display: flex;
+    flex-direction: row;
+    img{
+        margin: 50px;
+    }
+}
+.meetme{
+    font-family: belleza;
+    color: pink;
+    margin: 30px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.blog{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    img{
+        margin-left: 500px;
+    }
+}
+.inicioblog{
+    @include blogtitulo;
+}
+.inicioblog1{
+    @include blogtexto;
+}
+.cuidados{
+    @include blogtitulo;
+}
+.cuidados1{
+    @include blogtexto;
+}
+.cuidados2{
+    @include blogtitulo;
+}
+.cuidados3{
+    @include blogtexto;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include estilo;
+    color: pink;
+    p{
+        @include blogtitulo;
+        color: pink;
+
+    }
+}
+.formulario{
+   width: 200px;
+   height: 50px;
+   margin: 20px;
+   @include estilo;
+   color: pink;
+}
+.mensaje{
+    margin: 20px;
+    width: 400px;
+    height: 300px;
+    @include estilo;
+    color: pink;
+}
+.boton{
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    @include estilo;
+    color: pink;
+
+}
+
+@media (max-width: 376px) {
+    .logo{
+        @include columnmediaqueries;
+    }
+    .menu{
+        @include columnmediaqueries;
+    }
+    .fotos{
+        @include columnmediaqueries;
+    }
+    .footer{
+        @include columnmediaqueries;
+    }
+    .contacto{
+        @include columnmediaqueries;
+    }
+    .formulario{
+        width: 100px;
+     }
+     .mensaje{
+         width: 300px;
+     }
+     .holaa{
+        @include columnmediaqueries;
+    }
+    .grid-container{
+        @include columnmediaqueries;
+    }
+    .grid-historia1{
+        @include columnmediaqueries;
+    }
+    .blog{
+        @include columnmediaqueries;
+    }
+}
+
+.carrocompras{
+    background-color: #FF0072;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  .col{
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+  .close{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
